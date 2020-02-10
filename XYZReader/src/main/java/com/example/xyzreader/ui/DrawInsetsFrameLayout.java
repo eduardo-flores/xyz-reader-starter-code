@@ -26,6 +26,8 @@ import android.util.AttributeSet;
 import android.view.WindowInsets;
 import android.widget.FrameLayout;
 
+import androidx.annotation.RequiresApi;
+
 import com.example.xyzreader.R;
 
 
@@ -36,7 +38,7 @@ public class DrawInsetsFrameLayout extends FrameLayout {
     private Drawable mSideInsetBackground;
 
     private Rect mInsets;
-    private Rect mTempRect = new Rect();
+    private final Rect mTempRect = new Rect();
     private OnInsetsCallback mOnInsetsCallback;
 
     public DrawInsetsFrameLayout(Context context) {
@@ -100,6 +102,7 @@ public class DrawInsetsFrameLayout extends FrameLayout {
         mOnInsetsCallback = onInsetsCallback;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT_WATCH)
     @Override
     public WindowInsets onApplyWindowInsets(WindowInsets insets) {
         insets = super.onApplyWindowInsets(insets);
@@ -153,7 +156,7 @@ public class DrawInsetsFrameLayout extends FrameLayout {
         }
     }
 
-    public static interface OnInsetsCallback {
-        public void onInsetsChanged(Rect insets);
+    public interface OnInsetsCallback {
+        void onInsetsChanged(Rect insets);
     }
 }
