@@ -11,6 +11,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="@dimen/appbar_elevation"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
@@ -62,8 +63,11 @@
         android:layout_gravity="bottom|right|end"
         android:layout_margin="@dimen/fab_margin"
         android:background="?attr/selectableItemBackgroundBorderless"
+        android:backgroundTint="@color/theme_accent"
         android:clickable="true"
+        android:elevation="@dimen/fab_elevation"
         android:focusable="true"
-        android:src="@drawable/ic_share" />
+        android:src="@drawable/ic_share"
+        android:translationZ="@dimen/fab_press_translation_z" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

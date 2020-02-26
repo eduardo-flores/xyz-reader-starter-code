@@ -18,7 +18,44 @@
 <resources>
 
     <style name="Theme.Bacon" parent="@style/Theme.AppCompat.Light.NoActionBar">
-
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <item name="android:itemBackground">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
     </style>
 
+    <style name="Theme.Bacon.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Bacon.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Bacon.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CollapsingTextAppearance" parent="Base.TextAppearance.AppCompat.Widget.ActionBar.Title" />
+
+    <style name="CollapsingTextAppearance.Inverse">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="CardStyle">
+        <item name="cardCornerRadius">5dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">@color/theme_primary_light</item>
+    </style>
+
+    <style name="ListCardStyle">
+        <item name="cardCornerRadius">3dp</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">@color/theme_primary_light</item>
+    </style>
 </resources>
